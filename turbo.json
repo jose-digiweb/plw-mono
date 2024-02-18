@@ -12,6 +12,15 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "test": {
+      "env": ["CI"],
+      "dependsOn": ["^build"]
+    },
+    "test:dev": {
+      "env": ["CI"],
+      "cache": false,
+      "persistent": true
     }
   }
 }

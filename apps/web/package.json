@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3000",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint . --max-warnings 0"
+    "start": "next start --port 3001",
+    "lint": "eslint . --max-warnings 0",
+    "test": "pnpm run build && export CI='true' && pnpm exec playwright test --reporter=line",
+    "test:dev": "CI='false' && pnpm exec playwright test --ui"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
@@ -24,5 +26,8 @@
     "@types/react-dom": "^18.2.18",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@playwright/test": "^1.41.2"
   }
 }
