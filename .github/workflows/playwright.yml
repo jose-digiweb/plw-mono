@@ -19,7 +19,7 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Setup pnpm
-        run: pnpm config set store-dir ~/.pnpm-store
+        run: pnpm setup
       - name: Install Turbo
         run: pnpm install turbo --global
       - name: Install dependencies
