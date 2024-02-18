@@ -18,6 +18,8 @@ jobs:
           node-version: 18
       - name: Install pnpm
         run: npm install -g pnpm
+      - name: Setup shell environment
+        run: echo "::add-path::$(npm bin)"
       - name: Setup pnpm
         run: pnpm setup
       - name: Install Turbo
