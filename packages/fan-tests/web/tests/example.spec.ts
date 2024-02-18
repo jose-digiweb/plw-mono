@@ -8,6 +8,7 @@ test.describe('Testing the web app', async () => {
   test('The web app should load correctly', async ({ page }) => {
     const button = page.getByRole('button', { name: 'Click web!' });
 
+    // Click the button and take a screenshot
     await expect(button).toBeVisible();
   });
 });
