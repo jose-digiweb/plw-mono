@@ -25,7 +25,7 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
       - name: Run tests
-        run: turbo test --filter web
+        run: turbo test
       - uses: actions/upload-artifact@v2
         if: always()
         with:
