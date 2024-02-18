@@ -31,7 +31,7 @@ const LINKS = [
   {
     title: 'Docs',
     href: 'https://turbo.build/repo/docs',
-    description: 'Find in-depth information about Turborepo features and API.',
+    description: 'Find in-depth information about the Turborepo features and API.',
   },
   {
     title: 'Learn',
