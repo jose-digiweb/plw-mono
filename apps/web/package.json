@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start --port 3001",
     "lint": "eslint . --max-warnings 0",
-    "test": "pnpm run build && export CI='true' && pnpm exec playwright test --reporter=line",
-    "test:dev": "CI='false' && pnpm exec playwright test --ui"
+    "test": "pnpm exec playwright test --reporter=line",
+    "test:dev": "pnpm exec playwright test --ui"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
